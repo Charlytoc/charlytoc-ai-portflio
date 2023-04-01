@@ -1,0 +1,64 @@
+:root {
+    --color-mint: rgb(5, 238, 160);
+    --color-rose: rgb(255, 0, 119) !important;
+    --color-aquamarine: rgb(21, 196, 196);
+    --color-magenta: rgb(153, 0, 255);
+    --color-cerulean: rgb(0, 68, 255);
+
+
+}
+
+.var-1 {color:var(--color-mint)}
+.var-2 {color: var(--color-rose)}
+.var-3 {color: var(--color-aquamarine)}
+.var-4 {color: var(--color-magenta)}
+.var-5 {color: var(--color-cerulean)}
+
+.button-outline-rose {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 3px solid var(--color-rose);
+    color: var(--color-rose);
+}
+.button-outline-rose:hover {
+ background-color: var(--color-rose);
+ color: white;
+}
+.button-outline-mint {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 3px solid var(--color-mint);
+    color: var(--color-mint);
+}
+.button-outline-mint:hover {
+ background-color: var(--color-mint);
+ color: white;
+}
+.button-outline-cerulean {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 3px solid var(--color-cerulean);
+    color: var(--color-cerulean);
+}
+.button-outline-cerulean:hover {
+ background-color: var(--color-cerulean);
+ color: white;
+}
+.button-outline-magenta {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 3px solid var(--color-magenta);
+    color: var(--color-magenta);
+}
+.button-outline-magenta:hover {
+ background-color: var(--color-magenta);
+ color: white;
+}

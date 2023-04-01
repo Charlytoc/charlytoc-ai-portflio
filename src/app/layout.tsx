@@ -1,6 +1,7 @@
 // import './globals.css'
 import './styles/computer.css'
 import './styles/home.css'
+import './styles/globals.css'
 export const metadata = {
   title: 'Charlytoc awesome portfolio',
   description: 'Here you will to know me better than my mother',

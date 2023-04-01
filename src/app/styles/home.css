@@ -9,3 +9,7 @@
     flex-direction: column;
     word-break: break-all;
 }
+
+#waiting-greeting > * {
+    margin-top: 10px;
+}

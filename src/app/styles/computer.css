@@ -57,11 +57,7 @@ body {
     margin-bottom: 10px;
     color: rgb(173, 173, 173);
 }
-.var-1 {color: rgb(5, 238, 160);}
-.var-2 {color: rgb(255, 0, 119) !important;}
-.var-3 {color: rgb(21, 196, 196);}
-.var-4 {color: rgb(153, 0, 255);}
-.var-5 {color: rgb(0, 4, 255);}
+
 .button-start {
     /* background-color: aqua; */
     width: 40px;
