@@ -19,7 +19,7 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet"/>
 
-      <script src="https://kit.fontawesome.com/8ea552d239.js"></script>
+      <script src="https://kit.fontawesome.com/8ea552d239.js" async></script>
       </head>
       <body>{children}</body>
     </html>

@@ -12,22 +12,22 @@ export default function Computer () {
         return () => clearInterval(intervalId);
       }, []);
 
-    const spans = [
-        <span>Loading environment variables...</span>,
-        <span>Preparing your workspace</span>,
-        <span>Installing dependencies</span>,
-        <span><b className="var-1">Added 132 packages</b></span>,
-        <span>Almost done! Fount 0 vulnerabilities</span>,
-        <span> <br /></span>,
-        <span>$ Hello, I'm <b className="var-1">Charlytoc</b>!</span>,
-        <span>$ Welcome to my <b className="var-3">portfolio</b>!</span>,
-        <span>$ I'm a <b className="var-2">fullstack</b> software <b className="var-3">developer</b></span>,
-        <span>$ web <b className="var-4">designer</b></span>,
-        <span>$ <b className="var-5">AI researcher</b> </span>,
-        <span>$ and <b className="var-4">mentor</b> </span>,
-        <span>$ </span>,
-        <span>$ <b className="var-2">Click</b> the button to <b className="var-1">start</b> exploring</span>,
-      ];
+      const spans = [
+        <span key={0}>Loading environment variables...</span>,
+        <span key={1}>Preparing your workspace</span>,
+        <span key={2}>Installing dependencies</span>,
+        <span key={3}><b className="var-1">Added 132 packages</b></span>,
+        <span key={4}>Almost done! Fount 0 vulnerabilities</span>,
+        <span key={5}> <br /></span>,
+        <span key={6}>$ Hello, I&apos;m <b className="var-1">Charlytoc</b>!</span>,
+        <span key={7}>$ Welcome to my <b className="var-3">portfolio</b>!</span>,
+        <span key={8}>$ I&apos;m a <b className="var-2">fullstack</b> software <b className="var-3">developer</b></span>,
+        <span key={9}>$ web <b className="var-4">designer</b></span>,
+        <span key={10}>$ <b className="var-5">AI researcher</b> </span>,
+        <span key={11}>$ and <b className="var-4">mentor</b> </span>,
+        <span key={12}>$ </span>,
+        <span key={13}>$ <b className="var-2">Click</b> the button to <b className="var-1">start</b> exploring</span>,
+    ];
     
 
     return <>
@@ -35,7 +35,7 @@ export default function Computer () {
         <div className="computer-monitor">
             <div className="screen">
                 {spans.map((span, index) => (
-                    <span key={index} className={index <= currentSpanIndex ? 'show' : 'hide'}>
+                    <span key={index + 2 } className={index <= currentSpanIndex ? 'show' : 'hide'}>
                     {span}
                     </span>
                 ))}
