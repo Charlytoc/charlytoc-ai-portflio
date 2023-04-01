@@ -1,4 +1,5 @@
-import './globals.css'
+// import './globals.css'
+import './styles/computer.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,6 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com"/>
+      <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+
+      <script src="https://kit.fontawesome.com/8ea552d239.js"></script>
+      </head>
       <body>{children}</body>
     </html>
   )
