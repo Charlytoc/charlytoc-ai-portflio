@@ -13,3 +13,9 @@
 #waiting-greeting > * {
     margin-top: 10px;
 }
+nav {
+    background: linear-gradient(#ffffff1a, transparent);
+    padding: 20px;
+    color: var(--color-mint);
+
+}

@@ -19,7 +19,7 @@ body {
 }
 .computer-monitor {
 	margin: 0 auto;
-	height: 70vh;
+	height: 67vh;
 	width: 100%;
 	background-color: #141414;
 	border: 20px solid #000000;
@@ -36,7 +36,7 @@ body {
 	border-bottom-right-radius: 2rem;
 	border-bottom-left-radius: 2rem;
 	width: 100%;
-	height: 100px;
+	height: 60px;
 	background-color: var(--color-monitor-screen);
 
 }
@@ -84,6 +84,43 @@ body {
     background-color: rgb(9, 219, 149);
 
 }
+
+
+  .show {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+  
+  .hide {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      pointer-events: none;
+      user-select: none;
+    }
+    
+    .input-screen {
+        background-color: transparent;
+        font-family: var(--font-code);
+        width: 100%;
+        font-size: 8px;
+        padding: 5px;
+        border: 1px solid gray;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .input-screen::placeholder {
+        color: rgb(5, 238, 238);;
+    }
+    .button-launch {
+        background-color: var(--color-active);
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    
+}
 @media (min-width: 768px) {
     .computer-stand {
         box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.534);
@@ -118,41 +155,7 @@ body {
     .computer-bottom {
         width: 60vw;
     }
+    .input-screen {
+        width: 40%;
+    }
   }
-
-
-  .show {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .hide {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    pointer-events: none;
-    user-select: none;
-  }
-
-.input-screen {
-    background-color: transparent;
-    font-family: var(--font-code);
-    width: 250px;
-    font-size: 8px;
-    padding: 5px;
-    border: 1px solid gray;
-    display: block;
-    margin-bottom: 10px;
-}
-.input-screen::placeholder {
-    color: rgb(5, 238, 238);;
-}
-.button-launch {
-    background-color: var(--color-active);
-    border-radius: 3px;
-    border: 0;
-    padding: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000000;
-    
-}

@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Chat from "@/app/components/chat";
+import Navbar from "@/app/components/nav";
+
 
 interface queryParams {
     visitor: string;
@@ -18,6 +21,7 @@ const homePage = {
 
 export default function Port3000 ({params}: { params: queryParams }) {
     return <>
+    <Navbar/>
     <div id="waiting-greeting">
         <span>{homePage.greeting}<span className="var-2">{params.visitor}</span></span>
         <span>{homePage.currentlyWorking}</span>
@@ -28,5 +32,6 @@ export default function Port3000 ({params}: { params: queryParams }) {
         <Link className="button-outline-mint" href={`${homePage.cv}`} >Resume</Link>
   
     </div>
+    <Chat/>
     </>
 }

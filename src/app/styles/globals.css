@@ -5,8 +5,12 @@
     --color-magenta: rgb(153, 0, 255);
     --color-cerulean: rgb(0, 68, 255);
 
-
 }
+ * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
 
 .var-1 {color:var(--color-mint)}
 .var-2 {color: var(--color-rose)}
