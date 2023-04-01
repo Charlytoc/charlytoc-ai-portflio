@@ -1,18 +1,22 @@
 'use client'
 import { useEffect, useState } from "react"
+import Link from "next/link";
+
+const InputC = () => {
+    const [visitor, setVisitor] = useState('visi')
+    const handVi = (e) => {
+        setVisitor(e.target.value);
+    }
+    return <>
+    <input placeholder="Leave empty for visitor" onChange={(e)=> {handVi(e)}} className="input-screen var-4" />
+    <Link className="button-launch" href={`/3000/${visitor}`}>Launch app</Link>
+    </>
+}
 
 export default function Computer () {
     const [currentSpanIndex, setCurrentSpanIndex] = useState(0);
-
-    useEffect(() => {
-        const intervalId = 
-        setInterval(() => {
-          setCurrentSpanIndex((prevIndex) => prevIndex + 1);
-        }, 800);
-        return () => clearInterval(intervalId);
-      }, []);
-
-      const spans = [
+    // const [visitante, setVisitante] = useState('visi')
+    const spansOne = [
         <span key={0}>Loading environment variables...</span>,
         <span key={1}>Preparing your workspace</span>,
         <span key={2}>Installing dependencies</span>,
@@ -28,7 +32,28 @@ export default function Computer () {
         <span key={12}>$ </span>,
         <span key={13}>$ <b className="var-2">Click</b> the button to <b className="var-1">start</b> exploring</span>,
     ];
-    
+    const [spans, setSpans] = useState(spansOne)
+    useEffect(() => {
+        const intervalId = 
+        setInterval(() => {
+          setCurrentSpanIndex((prevIndex) => prevIndex + 1);
+        }, 800);
+        return () => clearInterval(intervalId);
+      }, []);
+
+
+    const handleButtonClick = () => {
+        setSpans([
+          <span key={0}><b className="var-1">Building...</b></span>,
+          <span key={1}>The app will open in port 3000...</span>,
+           <span key={2}>To ensure the better experience</span>,
+          <span key={3}>set you <b className="var-2">username</b> down below</span>,
+        <div key={4}><InputC /></div>,
+        ]);
+        setCurrentSpanIndex(0);
+      };
+
+
 
     return <>
     <div className="computer-container">
@@ -43,10 +68,13 @@ export default function Computer () {
             
         </div>
         <div className="computer-bottom">
-        <div className="button-start"><i className="fa-solid fa-play"></i></div>
+        <div className="button-start" onClick={handleButtonClick}><i className="fa-solid fa-play"></i></div>
         </div>
-        <div className="computer-stand"></div>
-        <div className="computer-stand-bottom"></div>
+        <div className="computer-stand">
+            
+        </div>
+        <div className="computer-stand-bottom">
+        </div>
     </div>
     </>
 }

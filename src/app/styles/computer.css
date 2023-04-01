@@ -3,7 +3,7 @@
     --color-monitor-one: #000000;
     --color-monitor-screen: #1f1e1e;
     --color-active: #07ffde;
-    
+    --font-code: 'Press Start 2P', cursive;
     
 }
 body {
@@ -58,7 +58,7 @@ body {
     color: rgb(173, 173, 173);
 }
 .var-1 {color: rgb(5, 238, 160);}
-.var-2 {color: rgb(255, 0, 119);}
+.var-2 {color: rgb(255, 0, 119) !important;}
 .var-3 {color: rgb(21, 196, 196);}
 .var-4 {color: rgb(153, 0, 255);}
 .var-5 {color: rgb(0, 4, 255);}
@@ -136,3 +136,27 @@ body {
     pointer-events: none;
     user-select: none;
   }
+
+.input-screen {
+    background-color: transparent;
+    font-family: var(--font-code);
+    width: 250px;
+    font-size: 8px;
+    padding: 5px;
+    border: 1px solid gray;
+    display: block;
+    margin-bottom: 10px;
+}
+.input-screen::placeholder {
+    color: rgb(5, 238, 238);;
+}
+.button-launch {
+    background-color: var(--color-active);
+    border-radius: 3px;
+    border: 0;
+    padding: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    
+}
