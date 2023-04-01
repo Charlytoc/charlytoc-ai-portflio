@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link";
 
 const InputC = () => {
-    const [visitor, setVisitor] = useState('visi')
+    const [visitor, setVisitor] = useState('Visitor')
     const handVi = (e) => {
         setVisitor(e.target.value);
     }
@@ -15,7 +15,6 @@ const InputC = () => {
 
 export default function Computer () {
     const [currentSpanIndex, setCurrentSpanIndex] = useState(0);
-    // const [visitante, setVisitante] = useState('visi')
     const spansOne = [
         <span key={0}>Loading environment variables...</span>,
         <span key={1}>Preparing your workspace</span>,
@@ -27,7 +26,7 @@ export default function Computer () {
         <span key={7}>$ Welcome to my <b className="var-3">portfolio</b>!</span>,
         <span key={8}>$ I&apos;m a <b className="var-2">fullstack</b> software <b className="var-3">developer</b></span>,
         <span key={9}>$ web <b className="var-4">designer</b></span>,
-        <span key={10}>$ <b className="var-5">AI researcher</b> </span>,
+        <span key={10}>$ <b className="var-2">AI researcher</b> </span>,
         <span key={11}>$ and <b className="var-4">mentor</b> </span>,
         <span key={12}>$ </span>,
         <span key={13}>$ <b className="var-2">Click</b> the button to <b className="var-1">start</b> exploring</span>,

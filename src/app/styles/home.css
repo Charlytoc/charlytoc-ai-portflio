@@ -1,0 +1,11 @@
+#waiting-greeting {
+    font-size: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-active);
+    text-align: center;
+    flex-direction: column;
+    word-break: break-all;
+}
