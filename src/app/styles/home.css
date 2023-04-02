@@ -1,10 +1,9 @@
 #waiting-greeting {
     font-size: 20px;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
+    justify-content: left;
     text-align: center;
     flex-direction: column;
     word-break: break-all;
@@ -14,8 +13,115 @@
     margin-top: 10px;
 }
 nav {
-    background: linear-gradient(#ffffff1a, transparent);
-    padding: 20px;
-    color: var(--color-mint);
+    padding: 6vmin;
+    color: var(--chat-primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#mobile-menu {
+    position: relative;
+}
 
+.icon-button {
+    color: var(--chat-primary-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+.mobile-drop-menu {
+    position: absolute;
+    right: 10px;
+    top: 10%;
+    z-index: 2;
+    height: fit-content;
+    padding: 6px;
+    width: fit-content;
+    background-color: var(--color-bg-backdrop);
+    backdrop-filter: blur(7px);
+    border-radius: 5px;
+    animation: move-to-down 300ms ease-in 1 forwards;
+}
+.mobile-drop-menu > a:not(:first-child) {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    z-index: 3;
+}
+
+#desktop-menu {
+    display: flex;
+    gap: 6vmin;
+    margin-right: 6vmin;
+    border: 2px solid transparent;
+}
+#desktop-menu > div {
+    padding: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+
+}
+.button-block {
+    display: block;
+    padding: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    text-decoration: none;
+    color: inherit;
+}
+.button-block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border: 2px solid var(--chat-primary-color);
+    border-bottom: 0;
+    border-left: 0;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+
+.button-block:hover::after {
+    background-color: var(--chat-primary-color);
+    height: 100%;
+    transition: all 500ms ease-in-out;
+}
+.button-block::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    border: 2px solid var(--chat-primary-color);
+    border-top: 0;
+    border-right: 0;
+    mix-blend-mode: difference;
+}
+
+.button-block:hover::before {
+    background-color: var(--chat-primary-color);
+    height: 100%;
+    transition: all 500ms ease-in-out;
+}
+
+
+
+@media (min-width: 708px) {
+    nav {
+        padding: 3vmin;
+    }
+    nav > h1 {
+        font-size: 40px;
+        margin-left: 23px;
+    }
+}
+
+
+@keyframes move-to-down {
+    0%{transform: translateY(-300px);}
+    100%{transform: translateY(0px);}
 }

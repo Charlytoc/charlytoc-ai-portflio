@@ -4,11 +4,15 @@ import Link from "next/link";
 
 const InputC = () => {
     const [visitor, setVisitor] = useState('Visitor')
-    const handVi = (e) => {
-        setVisitor(e.target.value);
-    }
+    const handVisitorChange = (e) => {
+        if (e.keyCode === 13) {
+          window.location.href = `/3000/${visitor}`;
+        } else {
+          setVisitor(e.target.value);
+        }
+      };
     return <>
-    <input placeholder="Default: 'visitor'" onChange={(e)=> {handVi(e)}} className="input-screen var-4" />
+    <input placeholder="Default: 'visitor'" onKeyDown={(e)=>handVisitorChange(e)} onChange={(e)=> {handVisitorChange(e)}} className="input-screen var-4" />
     <Link className="button-launch" href={`/3000/${visitor}`}>Launch app</Link>
     </>
 }

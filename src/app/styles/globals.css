@@ -1,16 +1,29 @@
 :root {
     --color-mint: rgb(5, 238, 160);
+    --color-bg: white;
+    --color-contrast-bg: rgb(0, 0, 0);
     --color-rose: rgb(255, 0, 119) !important;
     --color-aquamarine: rgb(21, 196, 196);
     --color-magenta: rgb(153, 0, 255);
     --color-cerulean: rgb(0, 68, 255);
-
+    --color-monitor-one: #000000;
+    --color-monitor-screen: #1f1e1e;
+    --color-active: #07ffde;
+    --font-code: 'Press Start 2P', cursive;
+    --chat-primary-color: #85c5ce;
+    --color-bg-backdrop: rgba(255, 255, 255, 0.671);
 }
+
  * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
  }
+ body {
+    background: var(--color-bg);
+    min-height: 100vh;
+    font-family: 'Dosis', sans-serif;
+}
 
 .var-1 {color:var(--color-mint)}
 .var-2 {color: var(--color-rose)}
@@ -35,11 +48,13 @@
     padding: 5px;
     text-decoration: none;
     border-radius: 4px;
-    border: 3px solid var(--color-mint);
-    color: var(--color-mint);
+    width: 200px;
+    text-align: center;
+    border: 3px solid var(--chat-primary-color);
+    color: var(--chat-primary-color);
 }
 .button-outline-mint:hover {
- background-color: var(--color-mint);
+ background-color: var(--chat-primary-color);
  color: white;
 }
 .button-outline-cerulean {
@@ -66,3 +81,17 @@
  background-color: var(--color-magenta);
  color: white;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: linear-gradient(90deg, #012125, #000000);
+        --color-contrast-bg: rgb(255, 255, 255);
+        --color-bg-backdrop: rgba(0, 0, 0, 0.459);
+    }
+  }
+
+@media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }

@@ -1,21 +1,14 @@
 *, *:before, *:after {box-sizing: border-box;}
-:root {
-    --color-monitor-one: #000000;
-    --color-monitor-screen: #1f1e1e;
-    --color-active: #07ffde;
-    --font-code: 'Press Start 2P', cursive;
-    
-}
-body {
-	background: linear-gradient(90deg, rgba(4, 34, 39, 0.979), rgb(0, 15, 14));
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: 'Signika', sans-serif;
-}
+
+
 .computer-container {
-    
+    height: 100vh;
+    width: 100vw;
 	position: relative;
     padding: 5vh;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(4, 34, 39, 0.979), rgb(0, 15, 14));
+    
 }
 .computer-monitor {
 	margin: 0 auto;
