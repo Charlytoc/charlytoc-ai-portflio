@@ -6,7 +6,6 @@ import axios from "axios"
 export default function Chat ({params}: queryParams) {
     const [showChat, setShowChat] = useState(false)
     const [question, setQuestion] = useState("")
-    const [previousAnswer, setPreviousAnswer] = useState("")
     const [chatMessages, setChatMessages] = useState([
         {
             type: 'bot',
@@ -57,7 +56,6 @@ export default function Chat ({params}: queryParams) {
         setTimeout(()=> {
             axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=10', data)
         .then((response) => {
-            setPreviousAnswer(response.data.answer)
             updatedMessagesThreat = [...updatedMessagesThreat,  makeMessage('bot', response.data.answer)]
             setChatMessages(updatedMessagesThreat)
             
@@ -69,7 +67,11 @@ export default function Chat ({params}: queryParams) {
         }, 150)
         
     }
-
+    const handleKeyUp = (e: any) => {
+        if (e.keyCode === 13) {
+            sendData()
+          }
+    }
     return <>
     {
         showChat && <div id="chat-container">
@@ -88,7 +90,7 @@ export default function Chat ({params}: queryParams) {
         </div>)}
         </div>
         <div className="chat-footer">
-            <input value={question} className="input-question" type="text" onChange={(e)=> setQuestion(e.target.value)} />
+            <input onKeyUp={(e)=> handleKeyUp(e)} value={question} className="input-question" type="text" onChange={(e)=> setQuestion(e.target.value)} />
             <button onClick={sendData}><i className="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
