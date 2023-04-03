@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 export default function Chat ({params}: queryParams) {
     const [showChat, setShowChat] = useState(false)
-    const [question, setQuestion] = useState("Hi! How are you?")
+    const [question, setQuestion] = useState("")
     const [previousAnswer, setPreviousAnswer] = useState("")
     const [chatMessages, setChatMessages] = useState([
         {
@@ -53,12 +53,14 @@ export default function Chat ({params}: queryParams) {
     const sendData = ():void => {
         let updatedMessagesThreat = [...chatMessages, makeMessage('visitor', question)]
         setChatMessages(updatedMessagesThreat)
+        setQuestion('')
         setTimeout(()=> {
             axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=10', data)
         .then((response) => {
             setPreviousAnswer(response.data.answer)
             updatedMessagesThreat = [...updatedMessagesThreat,  makeMessage('bot', response.data.answer)]
             setChatMessages(updatedMessagesThreat)
+            
         })
         .catch((error) => {
             console.error(error);
@@ -86,7 +88,7 @@ export default function Chat ({params}: queryParams) {
         </div>)}
         </div>
         <div className="chat-footer">
-            <input className="input-question" type="text" onChange={(e)=> setQuestion(e.target.value)} />
+            <input value={question} className="input-question" type="text" onChange={(e)=> setQuestion(e.target.value)} />
             <button onClick={sendData}><i className="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
