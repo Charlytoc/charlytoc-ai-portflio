@@ -24,8 +24,8 @@ export default function Navbar () {
     return <>
     <nav>
         <h1><div className="logo-container"><Image width={50} height={50} style={{alignSelf: 'center', width: '100%', height: '100%'}} src={logo} alt='logo'/></div> Charlytoc </h1>
-        <MobileMenu />
-        <DesktopMenu />
+        {isMobile && <MobileMenu />}
+        {!isMobile && <DesktopMenu />}
     </nav>
     </>
 }
