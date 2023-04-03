@@ -45,7 +45,7 @@ export default function Chat ({params}: queryParams) {
         token: '407f2194babf39d6d3e7870043717d37c35e0919',
         inputs: {
           question: question,
-          previous_answer: previousAnswer
+          visitor: params.visitor
         },
       };
 
