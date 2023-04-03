@@ -2,6 +2,8 @@
 import Link from "next/link"
 import { waiting } from "../helpers/waiting"
 import { useEffect, useState } from "react"
+import logo from './../resources/c-logo.png'
+import Image from "next/image"
 export default function Navbar () {
 
     const [isMobile, setIsMobile] = useState(true)
@@ -21,7 +23,7 @@ export default function Navbar () {
 
     return <>
     <nav>
-        <h1>Charlytoc </h1>
+        <h1><div className="logo-container"><Image width={50} height={50} style={{alignSelf: 'center', width: '100%', height: '100%'}} src={logo} alt='logo'/></div> Charlytoc </h1>
         {isMobile && <MobileMenu />}
         {!isMobile && <DesktopMenu />}
     </nav>

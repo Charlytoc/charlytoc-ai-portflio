@@ -19,6 +19,16 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+nav > h1 {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+}
+.logo-container {
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+}
 #mobile-menu {
     position: relative;
 }
