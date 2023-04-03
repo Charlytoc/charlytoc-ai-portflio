@@ -59,7 +59,7 @@ nav > h1 {
 }
 
 #desktop-menu {
-    display: flex;
+    display: none;
     gap: 6vmin;
     margin-right: 6vmin;
     border: 2px solid transparent;
@@ -71,6 +71,7 @@ nav > h1 {
     z-index: 4;
 
 }
+
 .button-block {
     display: block;
     padding: 14px;
@@ -127,6 +128,12 @@ nav > h1 {
     nav > h1 {
         font-size: 40px;
         margin-left: 23px;
+    }
+    #mobile-menu {
+        display: none;
+    }
+    #desktop-menu {
+        display: flex;
     }
 }
 

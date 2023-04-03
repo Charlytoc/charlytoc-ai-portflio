@@ -24,8 +24,8 @@ export default function Navbar () {
     return <>
     <nav>
         <h1><div className="logo-container"><Image width={50} height={50} style={{alignSelf: 'center', width: '100%', height: '100%'}} src={logo} alt='logo'/></div> Charlytoc </h1>
-        {isMobile && <MobileMenu />}
-        {!isMobile && <DesktopMenu />}
+        <MobileMenu />
+        <DesktopMenu />
     </nav>
     </>
 }
@@ -39,6 +39,7 @@ const MobileMenu = () => {
         {waiting.linkedin}
         {waiting.github}
         {waiting.portofolio}
+        {waiting.cv}
     </div>
     }
     <div  id="mobile-menu">
@@ -51,7 +52,7 @@ const MobileMenu = () => {
 const DesktopMenu = () => {
     return <>
     <div id="desktop-menu">
-        <Link className="button-block" href={`/about`}>About me</Link>
+        <Link className="button-block" href={`/3000/about`}>About me</Link>
         <Link className="button-block" href={`/project`}>Projects</Link>
         <Link className="button-block" href={`/contact`}>Contact</Link>
     </div>
