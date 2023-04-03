@@ -1,13 +1,12 @@
 
 #chat-container {
     position: fixed;
-    bottom: 0;
+    bottom: 0%;
     right: 2%;
     width: 96%;
-    height: 80%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    height: 75%;
+    border-radius: 10px;
+    margin-bottom: 10px;
     border-bottom: 0;
     border: 1px solid whitesmoke;
     animation: move-to-left 300ms ease-in-out 1 forwards;
@@ -36,17 +35,31 @@
     font-size: 18px
 }
 .chat-messages-container {
-    height: 70%;
+    height: 75%;
     backdrop-filter: blur(8px);
     width: 100%;
     padding: 15px;
 }
 
 .chat-footer {
-    height: 20%;
+    height: 10%;
     background: whitesmoke;
     width: 100%;
     border-bottom-left-radius: 10px;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: 10px;
+}
+.chat-footer > * {
+    height: 100%;
+}
+.chat-footer > button {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-rose);
+    cursor: pointer;
 }
 .button-container > button {
     border: 0;
@@ -62,6 +75,18 @@
     grid-template-columns: 10% 90%;
     align-items: center;
 }
+.visitor-message-bubble {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: var(--color-rose);
+    display: grid;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5px
+}
+
+
 .bot-message {
     display: block;
     border: 1px solid var(--chat-primary-color);
@@ -69,6 +94,16 @@
     border-radius: 10px;
     width: fit-content;
     color: #85c5ce;
+    font-size: 16px;
+}
+.visitor-message {
+    display: block;
+    border: 1px solid var(--color-rose);
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    color: var(--color-rose);
+    font-size: 16px;
 }
 
 #talk-to-chat {
@@ -80,10 +115,25 @@
     font-size: 30px;
     cursor: pointer;
 }
+.input-question {
+    background-color: rgb(3, 44, 44);
+    border: 0;
+    color: var(--color-rose);
+    font-size: 16px;
+    padding: 5%;
+    border-bottom-left-radius: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+.input-question:focus {
+    border: 2px solid var(--color-rose);
+    outline: none;
+}
 
 @media (min-width: 768px) {
     #chat-container {
         width: 400px;
+        right: 8%;
+        bottom: 2%;
     }
     .bot-message-bubble {
         grid-template-columns: 7% 93%;
