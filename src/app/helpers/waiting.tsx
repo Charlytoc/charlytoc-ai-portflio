@@ -1,7 +1,7 @@
 import Link from "next/link"
 export const waiting = {
     greeting: 'Hello, ',
-    currentlyWorking: `currently I'm working in this page, it will be available soon!`,
+    currentlyWorking: `Currently I'm working in this page, it will be available soon!`,
     byTheWay: `while I'm working you can talk to my AI in the right bottom corner!`,
     linkedin: <Link className="button-outline-mint" href={`https://www.linkedin.com/in/charlytoc/`} >Linkedin</Link>,
     github: <Link className="button-outline-mint" href={`https://github.com/Charlytoc`} >Github</Link>,

@@ -132,7 +132,7 @@
     cursor: pointer;
 }
 .input-question {
-    background-color: rgb(3, 44, 44);
+    background: whitesmoke;
     border: 0;
     color: var(--color-rose);
     font-size: 16px;
@@ -177,6 +177,9 @@
     .chat-messages-container {
         background-color: rgba(0, 10, 4, 0.274);
         backdrop-filter: blur(6px);
+    }
+    .input-question {
+        background-color: rgb(3, 44, 44);
     }
   }
 
