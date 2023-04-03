@@ -80,7 +80,7 @@ export default function Chat ({params}: queryParams) {
         </div>
         <div className="chat-messages-container">
         {chatMessages.map((item, index) => 
-        <div className={item.divClass}>
+        <div key={index} className={item.divClass}>
             { item.type == 'bot' ? 
             <><i className={item.iconClass}></i><span className={item.spanClass}>{item.message}</span></> 
             : <><span className={item.spanClass}>{item.message}</span><i className={item.iconClass}></i></>
