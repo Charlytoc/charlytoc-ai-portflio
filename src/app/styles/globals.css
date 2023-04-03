@@ -25,11 +25,14 @@
     font-family: 'Dosis', sans-serif;
 }
 
-.var-1 {color:var(--color-mint)}
-.var-2 {color: var(--color-rose)}
-.var-3 {color: var(--color-aquamarine)}
-.var-4 {color: var(--color-magenta)}
-.var-5 {color: var(--color-cerulean)}
+.var-1 {color:var(--color-mint) !important}
+.color-primary {color:var(--chat-primary-color) !important}
+.var-2 {color: var(--color-rose) !important}
+.color-rose {color: var(--color-rose) !important}
+.var-3 {color: var(--color-aquamarine) !important}
+.var-4 {color: var(--color-magenta) !important}
+.color-magenta {color: var(--color-magenta) !important}
+.var-5 {color: var(--color-cerulean) !important}
 
 .button-outline-rose {
     display: inline-block;

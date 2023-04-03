@@ -55,6 +55,7 @@ const DesktopMenu = () => {
         <Link className="button-block" href={`/3000/about`}>About me</Link>
         <Link className="button-block" href={`/project`}>Projects</Link>
         <Link className="button-block" href={`/contact`}>Contact</Link>
+        <Link className="button-block" href={`https://www.canva.com/design/DAFYIqfqXP0/FwCvRlI4Y3V3kP-cTkEaMA/view?utm_content=DAFYIqfqXP0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink`}>Resume</Link>
     </div>
     </>
 }
