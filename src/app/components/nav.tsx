@@ -10,7 +10,7 @@ export default function Navbar () {
 
     const determineDevice = () => {
         const width = window.innerWidth;
-        if (width <= 708) {
+        if (width <= 768) {
           setIsMobile(true)
         } else {
           setIsMobile(false)
@@ -24,8 +24,10 @@ export default function Navbar () {
     return <>
     <nav>
         <h1><div className="logo-container"><Image width={50} height={50} style={{alignSelf: 'center', width: '100%', height: '100%'}} src={logo} alt='logo'/></div> Charlytoc </h1>
-        {isMobile && <MobileMenu />}
-        {!isMobile && <DesktopMenu />}
+        <MobileMenu />
+        {/* {isMobile && <MobileMenu />}
+        {!isMobile && <DesktopMenu />} */}
+        <DesktopMenu />
     </nav>
     </>
 }

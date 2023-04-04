@@ -32,6 +32,19 @@ nav > h1 {
 #mobile-menu {
     position: relative;
 }
+#desktop-menu {
+    display: none;
+    gap: 6vmin;
+    margin-right: 6vmin;
+    border: 2px solid transparent;
+}
+
+
+
+
+
+
+
 
 .icon-button {
     color: var(--chat-primary-color);
@@ -58,12 +71,7 @@ nav > h1 {
     z-index: 3;
 }
 
-#desktop-menu {
-    display: none;
-    gap: 6vmin;
-    margin-right: 6vmin;
-    border: 2px solid transparent;
-}
+
 #desktop-menu > div {
     padding: 14px;
     cursor: pointer;
@@ -130,7 +138,7 @@ nav > h1 {
     font-size: 14vmin;
 }
 
-@media (min-width: 708px) {
+@media (min-width: 768px) {
     nav {
         padding: 3vmin;
     }

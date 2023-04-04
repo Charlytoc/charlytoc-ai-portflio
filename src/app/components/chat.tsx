@@ -6,6 +6,9 @@ import axios from "axios"
 export default function Chat ({params}: queryParams) {
     const [showChat, setShowChat] = useState(false)
     const [question, setQuestion] = useState("")
+    const [lastBotMessage, setLastBotMessage] = useState(`Hello, ${params.visitor}, ${chatHelper.welcome}`)
+    const [lastQuestion, setLastQuestion] = useState(`Hi Charly! I'm ${params.visitor}, I want to make questions for you`)
+    const [bufferQuestion, setBufferQuestion] = useState("")
     const [chatMessages, setChatMessages] = useState([
         {
             type: 'bot',
@@ -43,19 +46,25 @@ export default function Chat ({params}: queryParams) {
         extension: true,
         token: '407f2194babf39d6d3e7870043717d37c35e0919',
         inputs: {
-          question: question
+            previous_user_message: lastQuestion,
+            last_bot_message: lastBotMessage,
+            question: question
         },
       };
 
 
     const sendData = ():void => {
+
         let updatedMessagesThreat = [...chatMessages, makeMessage('visitor', question)]
         setChatMessages(updatedMessagesThreat)
+
         setQuestion('')
-        setTimeout(()=> {
-            axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=10', data)
+        axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=10', data)
         .then((response) => {
             updatedMessagesThreat = [...updatedMessagesThreat,  makeMessage('bot', response.data.answer)]
+
+            setLastBotMessage(response.data.answer)
+            setLastQuestion(bufferQuestion)
             setChatMessages(updatedMessagesThreat)
             
         })
@@ -63,7 +72,7 @@ export default function Chat ({params}: queryParams) {
             console.error(error);
         });
 
-        }, 150)
+  
         
     }
     const handleKeyUp = (e: any) => {
@@ -89,7 +98,7 @@ export default function Chat ({params}: queryParams) {
         </div>)}
         </div>
         <div className="chat-footer">
-            <input onKeyUp={(e)=> handleKeyUp(e)} value={question} className="input-question" type="text" onChange={(e)=> setQuestion(e.target.value)} />
+            <input onKeyUp={(e)=> handleKeyUp(e)} value={question} className="input-question" type="text" onChange={(e)=> {setQuestion(e.target.value), setBufferQuestion(e.target.value)}} />
             <button onClick={sendData}><i className="fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
