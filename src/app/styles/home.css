@@ -54,7 +54,7 @@ nav > h1 {
 .mobile-drop-menu {
     position: absolute;
     right: 10px;
-    top: 10%;
+    top: 13%;
     z-index: 2;
     height: fit-content;
     padding: 6px;

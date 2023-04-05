@@ -97,7 +97,7 @@
     color: var(--color-rose);
     display: grid;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     gap: 5px
 }
@@ -145,7 +145,7 @@
     outline: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 568px) {
     #chat-container {
         width: 400px;
         right: 8%;

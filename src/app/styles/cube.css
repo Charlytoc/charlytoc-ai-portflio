@@ -1,5 +1,12 @@
 #cube {
-    width: 50%;
-    height: 50vh;
+    width: 100%;
+    height: 80vh;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    #cube {
+        width: 50%;
+        height: 60vh;
+    }
 }

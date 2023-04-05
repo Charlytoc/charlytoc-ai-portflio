@@ -20,7 +20,7 @@ export default function Cube() {
   
       // Add objects to the scene here, for example:
       const geometry = new THREE.BoxGeometry();
-      const material = new THREE.MeshBasicMaterial({ color: 0x85c5ce, wireframe: true }); // Set material to show wireframe
+      const material = new THREE.MeshBasicMaterial({ color: 0xFF0062, wireframe: true }); // Set material to show wireframe
       const cubeMesh = new THREE.Mesh(geometry, material);
       scene.add(cubeMesh);
   
