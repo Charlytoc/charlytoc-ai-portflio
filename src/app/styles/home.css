@@ -18,6 +18,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: none;
 }
 nav > h1 {
     display: flex;
@@ -189,6 +190,6 @@ nav > h1 {
         transition: transform 0.4s ease-out;
         transform: translate(-50%, -50%);
         mix-blend-mode: difference;
-        box-shadow: 0px 0px 50px var(--chat-primary-color);
+        box-shadow: 0px 0px 60px var(--chat-primary-color);
       }
 }

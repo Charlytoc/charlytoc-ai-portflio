@@ -10,6 +10,7 @@
     border-bottom: 0;
     border: 1px solid whitesmoke;
     animation: move-to-left 300ms ease-in-out 1 forwards;
+    cursor: none;
 }
 .chat-header {
     height: 15%;

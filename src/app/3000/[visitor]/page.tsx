@@ -17,7 +17,7 @@ export default function Port3000 ({ params }: queryParams ) {
 
     return <>
     <div onMouseMove={handleMouseMove}>
-    <Navbar/>
+    <Navbar />
     <div className="cursor"></div>
     <Map />
     {/* <Cube /> */}

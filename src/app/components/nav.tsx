@@ -25,13 +25,14 @@ export default function Navbar () {
     <nav>
         <h1><div className="logo-container"><Image width={50} height={50} style={{alignSelf: 'center', width: '100%', height: '100%'}} src={logo} alt='logo'/></div> Charlytoc </h1>
         <MobileMenu />
-        {/* {isMobile && <MobileMenu />}
-        {!isMobile && <DesktopMenu />} */}
-        <DesktopMenu />
+        <DesktopMenu  />
     </nav>
     </>
 }
 
+interface propsIn {
+    visitor: string
+}
 
 const MobileMenu = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -50,13 +51,12 @@ const MobileMenu = () => {
     </>
 }
 
-
 const DesktopMenu = () => {
     return <>
     <div id="desktop-menu">
         <Link className="button-block" href={`/3000/about`}>About me</Link>
         <Link className="button-block" href={`/project`}>Projects</Link>
-        <Link className="button-block" href={`/contact`}>Contact</Link>
+        <Link className="button-block" href={`/3000/contact`}>Contact</Link>
         <Link className="button-block" href={`https://www.canva.com/design/DAFYIqfqXP0/FwCvRlI4Y3V3kP-cTkEaMA/view?utm_content=DAFYIqfqXP0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink`}>Resume</Link>
     </div>
     </>
