@@ -4,6 +4,8 @@ import './styles/home.css'
 import './styles/globals.css'
 import './styles/chat.css'
 import './styles/cube.css'
+import './styles/balloons.css'
+import './styles/map.css'
 export const metadata = {
   title: 'Charlytoc awesome portfolio',
   description: 'Here you will to know me better than my mother',

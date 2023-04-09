@@ -153,9 +153,42 @@ nav > h1 {
         display: flex;
     }
 }
-
-
 @keyframes move-to-down {
     0%{transform: translateY(-300px);}
     100%{transform: translateY(0px);}
+}
+
+
+
+
+
+  @media (min-width: 768px) {
+    nav {
+        padding: 3vmin;
+    }
+    nav > h1 {
+        font-size: 40px;
+        margin-left: 23px;
+    }
+    #mobile-menu {
+        display: none;
+    }
+    #desktop-menu {
+        display: flex;
+    }
+    .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: var(--chat-primary-color);
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.4s ease-out;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        box-shadow: 0px 0px 50px var(--chat-primary-color);
+      }
 }
