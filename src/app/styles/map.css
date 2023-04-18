@@ -22,6 +22,9 @@
     text-align: center;
     padding: 5px;
 }
+.map > h1 {
+    color: white
+}
 .map > .place {
     width: 80%;
     height: 80%;

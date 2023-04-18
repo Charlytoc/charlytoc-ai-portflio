@@ -1,7 +1,7 @@
 :root {
     --color-mint: rgb(11, 185, 127);
-    --color-bg: white;
-    --color-contrast-bg: rgb(0, 0, 0);
+    /* --color-bg: white; */
+    /* --color-contrast-bg: rgb(0, 0, 0); */
     --color-rose: rgb(255, 0, 98) !important;
     --color-aquamarine: rgb(21, 196, 196);
     --color-magenta: rgb(153, 0, 255);
@@ -11,7 +11,10 @@
     --color-active: #85c5ce;
     --font-code: 'Press Start 2P', cursive;
     --chat-primary-color: #85c5ce;
-    --color-bg-backdrop: rgba(255, 255, 255, 0.671);
+    /* --color-bg-backdrop: rgba(255, 255, 255, 0.671); */
+    --color-bg: linear-gradient(90deg, #012125, #000000);
+    --color-contrast-bg: rgb(255, 255, 255);
+    --color-bg-backdrop: rgba(0, 0, 0, 0.459);
 }
 
  * {
@@ -85,7 +88,7 @@
  color: white;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-bg: linear-gradient(90deg, #012125, #000000);
         --color-contrast-bg: rgb(255, 255, 255);
@@ -97,4 +100,4 @@
     html {
       color-scheme: dark;
     }
-  }
+  } */
