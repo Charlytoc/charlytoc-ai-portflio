@@ -58,6 +58,7 @@
     text-align: center;
     border: 3px solid var(--chat-primary-color);
     color: var(--chat-primary-color);
+    cursor: none;
 }
 .button-outline-mint:hover {
  background-color: var(--chat-primary-color);
@@ -88,16 +89,13 @@
  color: white;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    :root {
-        --color-bg: linear-gradient(90deg, #012125, #000000);
-        --color-contrast-bg: rgb(255, 255, 255);
-        --color-bg-backdrop: rgba(0, 0, 0, 0.459);
-    }
-  }
-
-@media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
-  } */
+.notification {
+    background-color: var(--color-rose);
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}

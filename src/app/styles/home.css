@@ -75,7 +75,7 @@ nav > h1 {
 
 #desktop-menu > div {
     padding: 14px;
-    cursor: pointer;
+    cursor: none;
     position: relative;
     z-index: 4;
 
@@ -84,7 +84,7 @@ nav > h1 {
 .button-block {
     display: block;
     padding: 14px;
-    cursor: pointer;
+    cursor: none;
     position: relative;
     z-index: 4;
     text-decoration: none;
