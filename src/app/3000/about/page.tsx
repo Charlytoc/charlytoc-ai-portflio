@@ -1,10 +1,15 @@
 import Navbar from "@/app/components/nav"
 import Cube from "@/app/components/cube"
+import CursorWrapper from "@/app/components/cursorWrapper"
 export default function AboutPage () {
+
     return <>
+    <CursorWrapper>
+        
     <Navbar />
-    <div>
-        <Cube />
-    </div>
+    <h1>This page is not complete yet, I'm working on it</h1>
+    <Cube />
+  
+    </CursorWrapper>
     </>
 }

@@ -16,7 +16,9 @@
     --color-contrast-bg: rgb(255, 255, 255);
     --color-bg-backdrop: rgba(0, 0, 0, 0.459);
 }
-
+html {
+    color-scheme: dark;
+}
  * {
     box-sizing: border-box;
     padding: 0;
@@ -26,6 +28,7 @@
     background: var(--color-bg);
     min-height: 100vh;
     font-family: 'Dosis', sans-serif;
+    cursor: none;
 }
 
 .var-1 {color:var(--color-mint) !important}
@@ -56,9 +59,10 @@
     border-radius: 4px;
     width: 200px;
     text-align: center;
-    border: 3px solid var(--chat-primary-color);
+    border: 2px solid var(--chat-primary-color);
     color: var(--chat-primary-color);
     cursor: none;
+    margin: 2px;
 }
 .button-outline-mint:hover {
  background-color: var(--chat-primary-color);
