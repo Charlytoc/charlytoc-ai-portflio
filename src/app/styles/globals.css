@@ -55,6 +55,7 @@
     text-align: center;
     border: 3px solid var(--chat-primary-color);
     color: var(--chat-primary-color);
+    cursor: none;
 }
 .button-outline-mint:hover {
  background-color: var(--chat-primary-color);
@@ -83,6 +84,17 @@
 .button-outline-magenta:hover {
  background-color: var(--color-magenta);
  color: white;
+}
+
+.notification {
+    background-color: var(--color-rose);
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 @media (prefers-color-scheme: dark) {

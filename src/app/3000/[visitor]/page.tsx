@@ -20,9 +20,6 @@ export default function Port3000 ({ params }: queryParams ) {
     <Navbar />
     <div className="cursor"></div>
     <Map />
-    {/* <Cube /> */}
-    {/* <Ballon /> */}
-
     <Chat params={params} />
     </div>
     </>
