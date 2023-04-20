@@ -7,21 +7,23 @@
     height: 75%;
     border-radius: 10px;
     margin-bottom: 10px;
-    border-bottom: 0;
-    border: 1px solid whitesmoke;
     animation: move-to-left 300ms ease-in-out 1 forwards;
     cursor: none;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: transparent;
 }
 .chat-header {
     height: 15%;
-    background: rgba(245, 245, 245, 0.76);
-    backdrop-filter: blur(7px);
+    /* background: rgba(245, 245, 245, 0.76); */
+    /* backdrop-filter: blur(7px); */
     width: 100%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     display: grid;
     grid-template-columns: 15% 70% 15%;
     padding: 15px;
+    background-color: rgba(0, 20, 22, 0.801);
+    backdrop-filter: blur(5px);
 }
 .chat-header > div {
     color: #85c5ce;
@@ -37,10 +39,11 @@
 }
 .chat-messages-container {
     height: 75%;
-    backdrop-filter: blur(8px);
     width: 100%;
     padding: 15px;
     overflow-y: auto;
+    background-color: rgba(0, 10, 4, 0.274);
+    backdrop-filter: blur(6px);
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -60,7 +63,7 @@
 
 .chat-footer {
     height: 10%;
-    background: whitesmoke;
+    /* background: whitesmoke; */
     width: 100%;
     border-bottom-left-radius: 10px;
     display: grid;
@@ -68,15 +71,18 @@
     align-items: center;
     justify-content: center;
     border-bottom-right-radius: 10px;
+    background-color: #001416;
+    backdrop-filter: blur(5px);
 }
 .chat-footer > * {
     height: 100%;
 }
 .chat-footer > button {
-    background-color: transparent;
     border: 0;
     color: var(--color-rose);
     cursor: pointer;
+    background-color: #001416;
+    border-bottom-right-radius: 10px;
 }
 .button-container > button {
     border: 0;
@@ -133,13 +139,13 @@
     cursor: pointer;
 }
 .input-question {
-    background: whitesmoke;
     border: 0;
     color: var(--color-rose);
     font-size: 16px;
     padding: 5%;
     border-bottom-left-radius: 10px;
     font-family: 'Dosis', sans-serif;
+    background-color: rgb(3, 44, 44);
 }
 .input-question:focus {
     border: 2px solid var(--color-rose);
@@ -162,31 +168,6 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-    #chat-container {
-        border: 1px solid rgb(0, 0, 0);
-        background-color: transparent;
-    }
-    .chat-header {
-        background-color: rgba(0, 20, 22, 0.801);
-        backdrop-filter: blur(5px);
-    }
-    .chat-footer {
-        background-color: #001416;
-        backdrop-filter: blur(5px);
-    }
-    .chat-footer > button {
-        background-color: #001416;
-        border-bottom-right-radius: 10px;
-    }
-    .chat-messages-container {
-        background-color: rgba(0, 10, 4, 0.274);
-        backdrop-filter: blur(6px);
-    }
-    .input-question {
-        background-color: rgb(3, 44, 44);
-    }
-  }
 
   @keyframes move-to-left {
     0%{transform: translateX(500px);}
