@@ -7,7 +7,7 @@ export default function AboutPage () {
     <CursorWrapper>
         
     <Navbar />
-    <h1>This page is not complete yet, I'm working on it</h1>
+    <h1>This page is not complete yet, I&apos;m working on it</h1>
     <Cube />
   
     </CursorWrapper>
