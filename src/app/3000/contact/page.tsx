@@ -1,7 +1,6 @@
 'use client'
 import Navbar from "@/app/components/nav"
 import { contactPage } from "@/app/helpers/contactHelper"
-import Link from "next/link"
 import { waiting } from "@/app/helpers/waiting"
 import emailjs from '@emailjs/browser';
 import { useState } from "react"
