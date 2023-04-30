@@ -59,7 +59,7 @@ export default function Chat ({params}: queryParams) {
         setChatMessages(updatedMessagesThreat)
 
         setQuestion('')
-        axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=10', data)
+        axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=11', data)
         .then((response) => {
             updatedMessagesThreat = [...updatedMessagesThreat,  makeMessage('bot', response.data.answer)]
 
