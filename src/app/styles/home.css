@@ -97,7 +97,7 @@ nav > h1 {
     right: 0;
     width: 50%;
     height: 50%;
-    border: 2px solid var(--chat-primary-color);
+    border: 2px solid #20c991;
     border-bottom: 0;
     border-left: 0;
     z-index: 2;
@@ -105,7 +105,7 @@ nav > h1 {
 }
 
 .button-block:hover::after {
-    background-color: var(--chat-primary-color);
+    background: linear-gradient(0, #20c991, #20a7c9);
     height: 100%;
     transition: all 500ms ease-in-out;
 }
@@ -116,14 +116,14 @@ nav > h1 {
     left: 0;
     width: 50%;
     height: 50%;
-    border: 2px solid var(--chat-primary-color);
+    border: 2px solid #20a7c9;
     border-top: 0;
     border-right: 0;
     mix-blend-mode: difference;
 }
 
 .button-block:hover::before {
-    background-color: var(--chat-primary-color);
+    background: linear-gradient(0, #20c991, #20a7c9);
     height: 100%;
     transition: all 500ms ease-in-out;
 }
@@ -184,7 +184,7 @@ nav > h1 {
         height: 40px;
         width: 40px;
         border-radius: 50%;
-        background-color: var(--chat-primary-color);
+        background: linear-gradient(132deg, #20c991, #20a7c9);
         pointer-events: none;
         z-index: 9999;
         transition: transform 0.4s ease-out;

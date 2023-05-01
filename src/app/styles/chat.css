@@ -133,10 +133,13 @@
     position: fixed;
     right: 7%;
     bottom: 6%;
-    color: #85c5ce;
-    border-radius: 50%;
+    color: transparent;
     font-size: 30px;
     cursor: pointer;
+    background: linear-gradient(132deg, #20c991, #20a7c9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .input-question {
     border: 0;

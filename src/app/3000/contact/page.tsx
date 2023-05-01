@@ -4,7 +4,7 @@ import { contactPage } from "@/app/helpers/contactHelper"
 import { waiting } from "@/app/helpers/waiting"
 import emailjs from '@emailjs/browser';
 import { useState } from "react"
-
+import PresentationCard from "@/app/components/presentationCard";
 const initValues = {name: "", message: "", email: ""}
 
 
@@ -42,22 +42,23 @@ export default function Contact () {
         <div id="contact-page" onMouseMove={handleMouseMove}>
         <Navbar />
         <div className="cursor"></div>
-        {showNotification && <Notification message={`You're email was sent succesfully`} />}
-        <h2>{contactPage.networks}</h2>
+        {showNotification && <Notification message={`Your email was sent succesfully`} />}
+        {/* <h2 className="text-gradient">{contactPage.networks}</h2>
         {waiting.linkedin}
         {waiting.github}
         {waiting.portofolio}
-        {waiting.whatsapp}
-        <h2>{contactPage.message}</h2>
+        {waiting.whatsapp} */}
+        <PresentationCard />
+        <h2 className="text-gradient">{contactPage.message}</h2>
         <section>
             <label >Your name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange}/>
+            <input type="text" name="name" value={formData.name}  onChange={handleChange}/>
             <label >Your email</label>
             <input type="text" name="email" value={formData.email} onChange={handleChange}/>
             <label >Message</label>
             <textarea  name="message" value={formData.message} onChange={handleChange} />
         </section>
-            <button onClick={sendEmail}>Send email</button>
+            <button className="button-gradient" onClick={sendEmail}>Send email</button>
 
         </div>
         </>

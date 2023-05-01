@@ -14,8 +14,8 @@ export default function Chat ({params}: queryParams) {
             type: 'bot',
             message:  `Hi, ${params.visitor}! ${chatHelper.welcome}`,
             divClass: `bot-message-bubble`,
-            spanClass: `bot-message`,
-            iconClass: `fa-solid fa-brain`
+            spanClass: `bot-message text-gradient`,
+            iconClass: `fa-solid fa-brain text-gradient`
         },
   
     ])
@@ -26,8 +26,8 @@ export default function Chat ({params}: queryParams) {
                 type: 'bot',
                 message: message,
                 divClass: `bot-message-bubble`,
-                spanClass: `bot-message`,
-                iconClass: `fa-solid fa-brain`
+                spanClass: `bot-message text-gradient`,
+                iconClass: `fa-solid fa-brain text-gradient`
             }
         }
         else {
@@ -84,9 +84,9 @@ export default function Chat ({params}: queryParams) {
     {
         showChat && <div id="chat-container">
         <div className="chat-header">
-            <div className="svg-container"><i className="fa-solid fa-brain"></i></div>
-            <div className="chat-title"><p>Charlybot</p></div>
-            <div className="button-container"><button onClick={()=> setShowChat(!showChat)}><i className="fa-regular fa-circle-xmark"></i></button></div>
+            <div className="svg-container"><i className="fa-solid fa-brain text-gradient"></i></div>
+            <div className="chat-title text-gradient"><p>Charlybot</p></div>
+            <div className="button-container"><button onClick={()=> setShowChat(!showChat)}><i className="fa-regular fa-circle-xmark text-gradient"></i></button></div>
         </div>
         <div className="chat-messages-container">
         {chatMessages.map((item, index) => 

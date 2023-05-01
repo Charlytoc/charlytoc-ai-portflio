@@ -7,6 +7,7 @@ import './styles/cube.css'
 import './styles/balloons.css'
 import './styles/map.css'
 import './styles/contact.css'
+import './styles/components.css'
 export const metadata = {
   title: 'Charlytoc awesome portfolio',
   description: 'Here you will to know me better than my mother',
