@@ -36,28 +36,27 @@
         display: flex;
     }
     
-.presentation-card > div:first-child {
-    position: relative;
-    height: 100%;
-    border-radius: 30px;
-    padding: 0;
-    width: 30%;
-}
-.presentation-card > div:first-child > img {
-    border-radius: 30px;
-    border-bottom-right-radius: 0%;
-    border-top-right-radius: 0%;
-}
-.presentation-card > div:last-child {
-    width: 80%;
-    height: 100%;
-    text-align: center;
-    padding: 5px;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0px;
+    .presentation-card > div:first-child {
+        position: relative;
+        height: 100%;
+        border-radius: 30px;
+        padding: 0;
+        width: 30%;
+    }
+    .presentation-card > div:first-child > img {
+        border-radius: 30px;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 0%;
+    }
+    .presentation-card > div:last-child {
+        padding-bottom: 0px;
+        height: 285px !important;
+    }
+
 }
 
+
+.education-component {
+    height: 100vh;
+    text-align: center;
 }

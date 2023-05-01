@@ -181,8 +181,8 @@ nav > h1 {
         position: fixed;
         top: 0;
         left: 0;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
         border-radius: 50%;
         background: linear-gradient(132deg, #20c991, #20a7c9);
         pointer-events: none;
