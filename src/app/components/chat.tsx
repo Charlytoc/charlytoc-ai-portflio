@@ -48,7 +48,8 @@ export default function Chat ({params}: queryParams) {
         inputs: {
             previous_user_message: lastQuestion,
             last_bot_message: lastBotMessage,
-            question: question
+            question: question,
+            include_organization_brief: false
         },
       };
 
