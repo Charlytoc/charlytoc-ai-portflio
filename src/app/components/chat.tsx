@@ -54,28 +54,33 @@ export default function Chat ({params}: queryParams) {
       };
 
 
-    const sendData = ():void => {
+  const sendData = (): void => {
+  let updatedMessagesThreat = [...chatMessages, makeMessage('visitor', question)];
+  setChatMessages(updatedMessagesThreat);
+  setQuestion('');
 
-        let updatedMessagesThreat = [...chatMessages, makeMessage('visitor', question)]
-        setChatMessages(updatedMessagesThreat)
+  const config = {
+    headers: {
+      Authorization: 'Token db6d3e8b29a8b41a02ee97651462294c9627fe40',
+    },
+  };
 
-        setQuestion('')
-        axios.post('https://rigobot.herokuapp.com/v1/prompting/complete/?template_id=11', data)
-        .then((response) => {
-            updatedMessagesThreat = [...updatedMessagesThreat,  makeMessage('bot', response.data.answer)]
+  axios
+    .post('https://rigobot.herokuapp.com/v1/prompting/completion11', data, config)
+    .then((response: any) => {
+      updatedMessagesThreat = [
+        ...updatedMessagesThreat,
+        makeMessage('bot', response.data.answer),
+      ];
 
-            setLastBotMessage(response.data.answer)
-            setLastQuestion(bufferQuestion)
-            setChatMessages(updatedMessagesThreat)
-            
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-
-  
-        
-    }
+      setLastBotMessage(response.data.answer);
+      setLastQuestion(bufferQuestion);
+      setChatMessages(updatedMessagesThreat);
+    })
+    .catch((error: any) => {
+      console.error(error);
+    });
+};
     const handleKeyUp = (e: any) => {
         if (e.keyCode === 13) {
             sendData()
