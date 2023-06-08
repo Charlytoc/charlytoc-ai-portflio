@@ -66,7 +66,7 @@ export default function Chat ({params}: queryParams) {
   };
 
   axios
-    .post('https://rigobot.herokuapp.com/v1/prompting/completion11', data, config)
+    .post('https://rigobot.herokuapp.com/v1/prompting/completion/11', data, config)
     .then((response: any) => {
       updatedMessagesThreat = [
         ...updatedMessagesThreat,
