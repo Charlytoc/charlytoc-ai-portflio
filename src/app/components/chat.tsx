@@ -43,15 +43,19 @@ export default function Chat ({params}: queryParams) {
 
 
     const data = {
-        extension: true,
-        token: '407f2194babf39d6d3e7870043717d37c35e0919',
-        inputs: {
-            previous_user_message: lastQuestion,
-            last_bot_message: lastBotMessage,
-            question: question,
-            include_organization_brief: false
-        },
+        question: question,
+        document_id: 1
       };
+    // const data = {
+    //     extension: true,
+    //     token: '407f2194babf39d6d3e7870043717d37c35e0919',
+    //     inputs: {
+    //         previous_user_message: lastQuestion,
+    //         last_bot_message: lastBotMessage,
+    //         question: question,
+    //         include_organization_brief: false
+    //     },
+    //   };
 
 
   const sendData = (): void => {
@@ -66,15 +70,15 @@ export default function Chat ({params}: queryParams) {
   };
 
   axios
-    .post('https://rigobot.herokuapp.com/v1/prompting/completion/11', data, config)
+    .post('https://charlytoc-personalis-assistens.onrender.com/conversation', data)
     .then((response: any) => {
       updatedMessagesThreat = [
         ...updatedMessagesThreat,
         makeMessage('bot', response.data.answer),
       ];
 
-      setLastBotMessage(response.data.answer);
-      setLastQuestion(bufferQuestion);
+    //   setLastBotMessage(response.data.answer);
+    //   setLastQuestion(bufferQuestion);
       setChatMessages(updatedMessagesThreat);
     })
     .catch((error: any) => {
