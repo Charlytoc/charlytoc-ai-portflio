@@ -6,24 +6,10 @@ import logo from './../resources/c.png'
 import Image from "next/image"
 export default function Navbar () {
 
-    const [isMobile, setIsMobile] = useState(true)
-
-    const determineDevice = () => {
-        const width = window.innerWidth;
-        if (width <= 768) {
-          setIsMobile(true)
-        } else {
-          setIsMobile(false)
-        }
-      }
-
-    useEffect(()=>{
-       determineDevice()
-    }, [])
 
     return <>
     <nav>
-        <h1 className="text-gradient"><div className="logo-container "><Image width={50} height={50} style={{alignSelf: 'center', width: '100%', height: '100%'}} src={logo} alt='logo'/></div> Charlytoc </h1>
+        <h1 className="text-gradient"><div className="logo-container "></div> Charlytoc </h1>
         <MobileMenu />
         <DesktopMenu  />
     </nav>

@@ -9,6 +9,7 @@
     --color-active: #85c5ce;
     --font-code: 'Press Start 2P', cursive;
     --chat-primary-color: #85c5ce;
+    --linear-gradient-mint-cerulean: linear-gradient(132deg, #20c991, #20a7c9);
     /* --color-bg-backdrop: rgba(255, 255, 255, 0.671); */
     --color-bg: linear-gradient(90deg, #012125, #000000);
     --color-contrast-bg: rgb(255, 255, 255);
