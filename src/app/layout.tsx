@@ -1,4 +1,4 @@
-// import './globals.css'
+
 import './styles/computer.css'
 import './styles/home.css'
 import './styles/globals.css'
@@ -8,6 +8,7 @@ import './styles/balloons.css'
 import './styles/map.css'
 import './styles/contact.css'
 import './styles/components.css'
+
 export const metadata = {
   title: 'Charlytoc awesome portfolio',
   description: 'Here you will to know me better than my mother',
@@ -28,7 +29,11 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet"></link>
       <script src="https://kit.fontawesome.com/8ea552d239.js" async></script>
       </head>
-      <body>{children}</body>
+      <body>
+        
+        {children}
+        
+        </body>
     </html>
   )
 }

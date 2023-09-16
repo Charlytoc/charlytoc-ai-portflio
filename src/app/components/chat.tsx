@@ -6,8 +6,6 @@ import axios from "axios"
 export default function Chat ({params}: queryParams) {
     const [showChat, setShowChat] = useState(false)
     const [question, setQuestion] = useState("")
-    const [lastBotMessage, setLastBotMessage] = useState(`Hello, ${params.visitor}, ${chatHelper.welcome}`)
-    const [lastQuestion, setLastQuestion] = useState(`Hi Charly! I'm ${params.visitor}, I want to make questions for you`)
     const [bufferQuestion, setBufferQuestion] = useState("")
     const [chatMessages, setChatMessages] = useState([
         {
@@ -46,16 +44,7 @@ export default function Chat ({params}: queryParams) {
         question: question,
         document_id: 1
       };
-    // const data = {
-    //     extension: true,
-    //     token: '407f2194babf39d6d3e7870043717d37c35e0919',
-    //     inputs: {
-    //         previous_user_message: lastQuestion,
-    //         last_bot_message: lastBotMessage,
-    //         question: question,
-    //         include_organization_brief: false
-    //     },
-    //   };
+
 
 
   const sendData = (): void => {

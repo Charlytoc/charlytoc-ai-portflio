@@ -132,3 +132,7 @@ html {
     justify-content: center;
     padding: 10px;
 }
+
+.mouse-wrapper {
+    min-height: 100vh;
+}
